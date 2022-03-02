@@ -14,6 +14,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # Mandatory to use the extract version from tag action
       
       - name: Extract version from tag
         uses: damienaicheh/extract-version-from-tag-action@v1.0.0
@@ -33,7 +35,7 @@ jobs:
         with:
           # List of tags
           tags: |
-            $IMAGE_NAME:latest
-            $IMAGE_NAME:$MAJOR
-            $IMAGE_NAME:$MAJOR.$MINOR
-            $IMAGE_NAME:$MAJOR.$MINOR.$PATCH
+            '${{ env.IMAGE_NAME}}:latest'
+            '${{ env.IMAGE_NAME}}:${{ env.MAJOR }}'
+            '${{ env.IMAGE_NAME}}:${{ env.MAJOR }}.${{ env.MINOR }}'
+            '${{ env.IMAGE_NAME}}:${{ env.MAJOR }}.${{ env.MINOR }}.${{ env.PATCH }}'
