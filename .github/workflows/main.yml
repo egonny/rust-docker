@@ -35,7 +35,7 @@ jobs:
         with:
           # List of tags
           tags: |
-            '${{ env.IMAGE_NAME}}:latest'
-            '${{ env.IMAGE_NAME}}:${{ env.MAJOR }}'
-            '${{ env.IMAGE_NAME}}:${{ env.MAJOR }}.${{ env.MINOR }}'
-            '${{ env.IMAGE_NAME}}:${{ env.MAJOR }}.${{ env.MINOR }}.${{ env.PATCH }}'
+            ${{ env.IMAGE_NAME}}:latest
+            ${{ env.IMAGE_NAME}}:${{ env.MAJOR }}
+            ${{ env.IMAGE_NAME}}:${{ env.MAJOR }}.${{ env.MINOR }}
+            ${{ env.IMAGE_NAME}}:${{ env.MAJOR }}.${{ env.MINOR }}.${{ env.PATCH }}
