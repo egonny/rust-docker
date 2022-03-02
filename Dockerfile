@@ -1,4 +1,4 @@
-FROM rust:1.59
+FROM rust:1.59.0
 
 RUN \
   apt-get update; \
