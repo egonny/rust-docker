@@ -1,12 +1,9 @@
-name: CI
+name: Build and push Docker image
 
 on:
   push:
     tags:
       - v*
-  pull_request:
-
-  workflow_dispatch:
 
 jobs:
   build:
