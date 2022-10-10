@@ -1,4 +1,4 @@
-FROM rust:1.62.1
+FROM rust:1.63.0
 
 RUN \
   apt-get update; \
